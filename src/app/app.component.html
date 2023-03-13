@@ -8,15 +8,36 @@
   <title>Document</title>
 </head>
 <body>
-<h1>Angular Router App</h1>
-<!-- This nav gives you links to click, which tells the router which route to use (defined in the routes constant in  AppRoutingModule) -->
-<nav>
-  <ul>
-    <li><a routerLink='/auth/login'>Login</a></li>
-    <li><a routerLink='/auth/register'>Register</a></li>
-  </ul>
-</nav>
-<!-- The routed views render in the <router-outlet>-->
-<router-outlet></router-outlet>
+<h1 class='title'>Angular Router App</h1>
+<!-- ************************* 헤더 부분 시작 ************************* -->
+<header class='header'>
+  <a routerLink='/'>
+    <img class='logo' src='https://source.unsplash.com/random' alt='logo' />
+  </a>
+  <nav>
+    <ul class='nav__links'>
+      <li><a routerLink='/auth/login'>Login</a></li>
+      <li><a routerLink='/auth/register'>Register</a></li>
+      <li><a routerLink='/communities'>Community</a></li>
+    </ul>
+  </nav>
+  <a routerLink='/contact'>
+    <button class='contact__btn'>Contact</button>
+  </a>
+</header>
+<!-- ************************* 헤더 부분 끝 ************************* -->
+
+<!-- ************************* 메인 부분 시작 ************************* -->
+<div class='content'>
+  <div *ngIf='window.location.href === "http://localhost:4200/" '>
+    <app-home></app-home>
+  </div>
+  <router-outlet></router-outlet>
+</div>
+<!-- ************************* 푸터 부분 시작 ************************* -->
+<footer class='footer'>
+  <p>© 2021 Angular Router App</p>
+</footer>
+<!-- ************************* 푸터 부분 끝 ************************* -->
 </body>
 </html>

@@ -1,14 +1,7 @@
-<!doctype html>
-<html lang='en'>
-<head>
-  <meta charset='UTF-8'>
-  <meta name='viewport'
-        content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0'>
-  <meta http-equiv='X-UA-Compatible' content='ie=edge'>
-  <title>Document</title>
-</head>
-<body>
+
 <h1 class='title'>Angular Router App</h1>
+
+
 <!-- ************************* 헤더 부분 시작 ************************* -->
 <header class='header'>
   <a routerLink='/'>
@@ -27,6 +20,8 @@
 </header>
 <!-- ************************* 헤더 부분 끝 ************************* -->
 
+
+
 <!-- ************************* 메인 부분 시작 ************************* -->
 <div class='content'>
   <div *ngIf='window.location.href === "http://localhost:4200/" '>
@@ -34,10 +29,14 @@
   </div>
   <router-outlet></router-outlet>
 </div>
+<!-- ************************* 메인 부분 끝 ************************* -->
+
+
+
+
 <!-- ************************* 푸터 부분 시작 ************************* -->
 <footer class='footer'>
   <p>© 2021 Angular Router App</p>
 </footer>
 <!-- ************************* 푸터 부분 끝 ************************* -->
-</body>
-</html>
+
